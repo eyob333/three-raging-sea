@@ -43,8 +43,8 @@ waterMaterial.uniforms = {
 
     uDeepthColor: {value: new THREE.Color( debugObject.deepthColor )},
     uSurfaceColor: {value: new THREE.Color( debugObject.surfaceColor )},
-    uColorOffSet : {value: .08},
-    uColorMultiplier: {value: 5.}
+    uColorOffSet : {value: .241},
+    uColorMultiplier: {value: 2.75}
 
 }
 
@@ -60,8 +60,8 @@ gui.addColor( debugObject, 'deepthColor').name('deepthColor').onChange( () => { 
 gui.add( waterMaterial.uniforms.uColorMultiplier, 'value').min(.0).max(10.0).step( 0.0001).name('uColorMultiplyier')
 gui.add( waterMaterial.uniforms.uColorOffSet, 'value').min(.0).max(10.0).step( 0.0001).name('uColorOffSet')
 
-gui.add( waterMaterial.uniforms.uSmallWavesElevation, 'value').min(.0).max(1.0).step( 0.0001).name('uSmallWaveElevation')
-gui.add( waterMaterial.uniforms.uSmallWavesFrequency, 'value').min(.0).max(10.0).step( 0.0001).name('uSmallWaveFrequency')
+gui.add( waterMaterial.uniforms.uSmallWavesElevation, 'value').min(.0).max(1.0).step( 0.001).name('uSmallWaveElevation')
+gui.add( waterMaterial.uniforms.uSmallWavesFrequency, 'value').min(.0).max(10.0).step( 0.001).name('uSmallWaveFrequency')
 gui.add( waterMaterial.uniforms.uSmallWavesSpeed, 'value').min(.0).max(5.0).step( 0.01).name('uSmallWaveSpeed')
 gui.add( waterMaterial.uniforms.uSmallWavesItrations, 'value').min(1.0).max(6.0).step( 1).name('uSmallWaveItrations')
 
