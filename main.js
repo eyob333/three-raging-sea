@@ -17,11 +17,14 @@ const canvas = document.querySelector('canvas.webgl')
 // Scene
 const scene = new THREE.Scene()
 
+// const fog = new THREE.Fog('#262837', 1, 5)
+// scene.fog = fog
+
 /**
  * Water
  */
 // Geometry
-const waterGeometry = new THREE.PlaneGeometry(2, 2, 528, 528)
+const waterGeometry = new THREE.PlaneGeometry(10, 10, 528, 528)
 
 debugObject.deepthColor = '#186691'
 debugObject.surfaceColor = '#8bd8ff'
@@ -115,7 +118,7 @@ const renderer = new THREE.WebGLRenderer({
 })
 renderer.setSize(sizes.width, sizes.height)
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
-
+renderer.setClearColor('#262837')
 /**
  * Animate
  */
